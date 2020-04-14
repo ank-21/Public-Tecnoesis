@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('../images/mars-planet-newest-web.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: black;
+    height: 100vh;
+    font-family: Georgia; 
+    overflow: hidden;
+}
+
+.skip-button{
+    background-color: black;
+    width: 75px;
+    font-size: 25px;
+    color: #feda4a;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: auto ;
+    margin-right: 10px;
+    border:2px solid #fce484;
+    cursor: pointer;
+}
+
+.skip-button:hover {
+  background-color:#52d1ff;
+  color: black;
+  border-color: black;
+  cursor: pointer;
+}
+
+.fade {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    top: -25px;
+    z-index: 1;
+  }
+  
+  .star-wars {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 800px;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    perspective: 400px;
+    text-align: justify;
+
+  }
+  
+  .crawl {
+    position: relative;
+    top: 99999px;
+    transform-origin: 50% 100%;
+    animation: crawl 60s linear;
+  }
+  
+  .crawl > .title {
+    font-size: 90%;
+    text-align: center;
+  }
+  
+  .crawl > .title h1 {
+    margin: 0 0 100px;
+    text-transform: uppercase;
+  }
+  
+  @keyframes crawl {
+      0% {
+      top: -100px;
+      transform: rotateX(20deg)  translateZ(0);
+    }
+      100% { 
+      top: -6000px;
+      transform: rotateX(25deg) translateZ(-2500px);
+    }
+  }
+
+.rules{
+  display: none;
+  color:white;
+  width: 100%;
+  height: 100vh;
+  
+}
+.inforules{
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%,50%);
+  text-align:left;
+  font-size: 20px;
+  line-height: 1.6;
+  
+}
+  
+  .initialDetails{
+    color: white;
+    display: none;
+  }
+  
+  .formDiv{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+    width: 45%;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 20px;
+  }
+  
+  .container1 {
+  padding: 16px;
+  }
+  
+  .infoForm{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  }
+  
+  .infoForm:focus{
+  background-color: #ddd;
+  outline: none;
+  }
+  .continuebtn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+  }
+  .continuebtn1 {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,50%);
+    background-color: black;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    }
+  
+  .continuebtn:hover {
+  opacity:1;
+  }
+  
+/* end to index.html*/
+
+/* start to luckydraw.html */
+
+.Combined{
+    display: flex;
+    height: 40%;
+}
+.stage {
+  background:black;
+  width: calc((100% - 50px ) / 3);
+  height: 100%;
+  margin: 4em auto;
+  border: 10px solid #333;
+  box-shadow: 1px 4px 11px #aaa, inset 1px 3px 6px #ccc;
+  position: relative;
+  float: left;
+}
+
+.stage-content {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  color: aqua;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  transform: translateY(0.5em);
+  font-size: 1.1em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.curtain-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.curtain-panel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.curtain-panel .curtain {
+  width: 50%;
+  background-color: #1B6CE0;
+  position: relative;
+  transition: transform 0.5s ease-out;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.curtain-panel .curtain:before {
+  content: attr(data-title);
+  color: antiquewhite;
+  text-align: center;
+  width: 200%;
+  position: absolute;
+  top: 50%;
+  line-height: 0;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 3px #ccc;
+}
+
+.curtain-panel .left-curtain:before {
+  left: 0;
+}
+
+.curtain-panel .right-curtain:before {
+  right: 0;
+}
+
+.curtain-panel .curtain:after {
+  content: '';
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle at 10px -5px, rgba(0, 0, 0, 0) 12px, #fff 13px);
+  display: block;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.curtain-trigger {
+  visibility: hidden;
+  position: absolute;
+}
+
+.curtain-trigger:checked ~ .left-curtain {
+  transform: translateX(-100%);
+}
+
+.curtain-trigger:checked ~ .right-curtain {
+  transform: translateX(100% );
+}
+
+.introduction1{
+  z-index: 2;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 40px;
+  text-align: center;
+  color: aqua;
+}
+
+/* end of luckydraw*/
+
+.yoda{
+  height: 100vh;
+  width: 30%;
+  float: left;
+  position: relative;
+}
+.yoda-image{
+  float: left;
+  height: 50%;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+.introduction{
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%,50%);
+  text-align: center;
+  line-height: 1.6;
+  color: white;
+}
+#typedtext{
+  font-size: 20px;
+}
+
+.proceed-button{
+    display: none;
+    background-color: black;
+    width: 115px;
+    font-size: 25px;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: auto ;
+    margin-right: 10px;
+    border:2px solid white;
+    cursor: pointer;
+}
+
+.proceed-button:hover {
+  background-color:#52d1ff;
+  color: black;
+  border-color: black;
+  cursor: pointer;
+}
+
+.removedText{
+  display: none;
+  font-size: 20px;
+  line-height: 1.6;
+}

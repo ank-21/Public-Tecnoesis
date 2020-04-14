@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cyberhunt2.0</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body oncontextmenu="return false">
+  <section class="Combined">
+    <div class="stage" id="stage1">
+        <div class="stage-content" id="stage-content1"></div>
+        <label class="curtain-container">
+          <div class="curtain-panel">
+            <input type="checkbox" class="curtain-trigger" id="curtain1" onclick="calling1()" />
+            <div class="left-curtain curtain" data-title="Path 1"></div>
+            <div class="right-curtain curtain" data-title="Path 1"></div>
+          </div>
+        </label>
+      </div>
+      <div class="stage" id="stage2">
+        <div class="stage-content" id="stage-content2"></div>
+        <label class="curtain-container">
+          <div class="curtain-panel">
+            <input type="checkbox" class="curtain-trigger" id="curtain2"  onclick="calling2()" />
+            <div class="left-curtain curtain" data-title="Path 2"></div>
+            <div class="right-curtain curtain" data-title="Path 2"></div>
+          </div>
+        </label>
+      </div>
+      <div class="stage" id="stage3">
+        <div class="stage-content" id="stage-content3"></div>
+        <label class="curtain-container">
+          <div class="curtain-panel">
+            <input type="checkbox" class="curtain-trigger" id="curtain3" onclick="calling3()" />
+            <div class="left-curtain curtain" data-title="Path 3"></div>
+            <div class="right-curtain curtain" data-title="Path 3"></div>
+          </div>
+        </label>
+      </div>
+    </section>
+
+
+    <section class="introduction1">
+      <div ><h1>Welcome</h1></div>
+      <div>The three paths above reveals the way on which you will proceed further<br>
+        one will lead you to a long path, one will lead you through a shortcut <br>
+        and one will provide a little assistance.. <br>
+      so choose wisely.....</div>
+    </section>
+    
+      
+      
+    <script type="text/javascript" src="../script/script.js"></script>
+    <script type="text/javascript" >
+      var randomMatrix = ["A Little Help","One More Challenge","Skip the Next"];
+      var randomNumber = Math.floor((Math.random() * 3));
+var fortune = randomMatrix[randomNumber];
+
+function calling1(){
+    console.log(document.getElementById("curtain1").checked);
+    if(document.getElementById("curtain1").checked == true){
+        document.getElementById("stage-content1").innerHTML = fortune;
+        var fadeTarget = document.getElementById("stage2");
+        var fadeTarget1 = document.getElementById("stage3");
+        var fadeEffect = setInterval(function () {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+            fadeTarget1.style.opacity = 1;
+        }
+        if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.1;
+            fadeTarget1.style.opacity -= 0.1;
+        } else {
+            clearInterval(fadeEffect);
+            fadeTarget.style.display = "none";
+            fadeTarget1.style.display = "none";
+            pageLoader();
+        }
+    }, 50);
+        
+    }else{
+        console.log("unchecked");
+    }
+}
+
+function calling2(){
+    console.log(document.getElementById("curtain2").checked);
+    if(document.getElementById("curtain2").checked == true){
+        document.getElementById("stage-content2").innerHTML = fortune;
+        var fadeTarget = document.getElementById("stage1");
+        var fadeTarget1 = document.getElementById("stage3");
+        var fadeEffect = setInterval(function () {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+            fadeTarget1.style.opacity = 1;
+        }
+        if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.1;
+            fadeTarget1.style.opacity -= 0.1;
+        } else {
+            clearInterval(fadeEffect);
+            fadeTarget.style.display = "none";
+            fadeTarget1.style.display = "none";
+            pageLoader();
+        }
+    }, 50);
+        
+    }else{
+        console.log("unchecked");
+    }
+    
+}
+function calling3(){
+    console.log(document.getElementById("curtain3").checked);
+    if(document.getElementById("curtain3").checked == true){
+        document.getElementById("stage-content3").innerHTML = fortune;
+        var fadeTarget = document.getElementById("stage2");
+        var fadeTarget1 = document.getElementById("stage1");
+        var fadeEffect = setInterval(function () {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+            fadeTarget1.style.opacity = 1;
+        }
+        if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.1;
+            fadeTarget1.style.opacity -= 0.1;
+        } else {
+            clearInterval(fadeEffect);
+            fadeTarget.style.display = "none";
+            fadeTarget1.style.display = "none";
+            pageLoader();
+        }
+    }, 50);
+    }else{
+        console.log("unchecked");
+    } 
+}
+
+function pageLoader(){
+  let url=window.location.href;
+		let urlArr=url.split('?');
+  if(randomNumber == 0){
+    alert("Congrats you will be getting a little help in next challenge");
+    window.location.href = "../question/question16.html?"+urlArr[1];
+  }
+  if(randomNumber == 1){
+    alert("Tough Luck, Seems like you will be going a little bit longer");
+    window.location.href = "../question/question16_nn.html?"+urlArr[1];
+  }
+  if(randomNumber == 2){
+    alert("Congrats your path has been Shortened");
+    window.location.href = "../question/question17.html?"+urlArr[1];
+  }
+}
+
+    </script>
+</body>
+</html>
+

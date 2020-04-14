@@ -1,0 +1,25 @@
+{
+  "name": "tecnoesis2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,html,hbs,css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.0",
+    "mongoose": "^5.7.14",
+    "mustache": "^3.2.1",
+    "nodemailer": "^6.4.2",
+    "pdfkit": "^0.11.0",
+    "razorpay": "^2.0.5",
+    "validator": "^12.1.0"
+  }
+}

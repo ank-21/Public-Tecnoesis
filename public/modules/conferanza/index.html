@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conferenza | Tecnoesis</title>
+	<link rel="icon" href="images/icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css">
+		#loader{position: fixed; top: 0; left: 0; z-index: 999; background: rgba(0,0,0, 0.9); width: 99.99vw; height: 99.99vh; overflow: hidden;}
+		#loaderCircle {
+			position: absolute; left: 50%; top: 50%;
+			transform: translate(-50%, -50%);
+			width: 80px; height: 80px;
+			border: 10px solid #f3f3f3; border-radius: 50%; border-top: 10px solid rgb(254,0,0); border-left: 10px solid rgb(254,0,0);
+			animation: spin 4s linear infinite;
+			animation-fill-mode: forwards;
+		}
+				
+		.spinner{
+			width: 80px;
+			height: 80px;
+			border: 2px solid #38dbff;
+			border-top:3px solid #014b5c;
+			border-radius: 100%;
+			position: absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			right: 0;
+			margin: auto;
+			animation: spin 1s infinite linear;
+		}
+
+		.img-inside{
+			position: absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			right: 0;
+			margin: auto;
+		}
+
+		@keyframes spin {
+			0% { transform:rotate(0deg); }
+			100% { transform:rotate(-360deg); }
+		}
+
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-metro.css">
+	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- 	<script src="https://unpkg.com/scrollreveal"></script>
+	<script type="text/javascript">
+		ScrollReveal({
+			scale: 0.85,
+			duration: 1000,
+		});
+	</script> -->
+</head>
+<body onload="stopLoader()">
+	<div id="loader">
+			<img src="../../optimized/logo white-small.png" style="height: 60px;" class="img-inside">
+		<div class="spinner">
+
+		</div>
+	</div>
+	<div class="container-home" id="home">
+		<!-- navbar start -->
+		<div class="nav-container w3-card-4">
+			<div class="bar-item" style="float: left;">
+				<a href="../../">
+				<img src="images/logo_white.png" height="60px" width="220px">
+			</a>
+			</div>
+			<div class="nav-bar w3-text-white">
+				<div class="bar-item"><a href="#home">Home</a></div>
+				<div class="bar-item"><a href="#about">About</a></div>
+				<div class="bar-item"><a href="#speakers">Our Speakers</a></div>
+				<div class="bar-item"><a href="#prev-speakers">Previous Speakers</a></div>
+				<div class="bar-item"><a href="#contact">Contact Us</a></div>	
+			</div>
+
+			<button id="hamburger-toggle" class="w3-button w3-xlarge w3-right w3-card-4" onclick="w3_open()" style="background: transparent; color: white;">&#9776;</button>
+			
+			<div class="w3-sidebar w3-bar-block w3-collaps w3-card w3-animate-right" style="width:200px;right:0;" id="mySidebar">
+				<button class="w3-bar-item w3-button w3-large" onclick="w3_close()" style="background: #cc1111; color: white;">Close &times;</button>
+				<a href="#home" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">Home</a>
+				<a href="#about" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">About</a>
+				<a href="#speakers" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">Our Speakers</a>
+				<a href="#prev-speakers" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">Previous Speakers</a>
+				<a href="#contact" class="w3-bar-item w3-button w3-hover-indigo" onclick="w3_close()">Contact</a>
+			</div>
+
+
+		</div>
+		<!-- navbar end -->
+		<div class="intro-heading">
+			<a href="http://tecnoesis.org/" target="_blank"><img id="intro-banner" src="images/logo_white.png"></a>
+			<h3>PRESENTS</h3>
+			<h1 style="font-family: Electrolize;">CONFERENZA</h1>
+			<p>Glean wisdom from some of the most brilliant personalities of our time</p>
+		</div>
+	</div>
+
+	<div class="about" id="about">
+
+		<div class="main-header-container w3-padding w3-card">
+			<h2>ABOUT CONFERENZA</h2>
+		</div>
+
+		<div class="about-conferenza w3-row">
+			<!-- <div class="about-img w3-card w3-hover-shadow"></div> -->
+			<div class="about-text">
+				<div>
+					<p style="margin-top: 0px;">Conferenza is the Guest Lecture module of our grand annual techno-management fest Tecnoesis which aims at motivating and providing guidance to students by organizing a series of Guest Lectures by a variety of individuals who have achieved remarkable feats in their life and have struggled through with all their might to emerge as winners.
+					</p>
+					<p>
+						We have hosted various dignitaries in the past like:- IPS Abhyanand (co-founder of Super 30), Balaji Viswanathan (famous Quora writer), IAS Vivek Atray, Dr. Uddhabh Bharali (Inventor aka 'Real Life Phunsukh Wangdu'), IAS Chanchal Rana (AIR 7 UPSC Civil Services Examination), Jadav Payeng ('Forest Man of India'), Rahul Kaushik (Founder & Writer at 'The Melting Words') and the list goes on and on....
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--		 speakers start		--> 
+	<div class="speakers w3-center w3-content" id="speakers" style="max-width: 1200px;">
+
+		<div class="main-header-container w3-padding w3-card">
+			<h2>OUR SPEAKERS</h2>
+		</div>
+
+		<div class="row-container w3-container" style="margin-top: 0px!important;">
+			<div style="position: relative; left: 50%; transform: translateX(-50%);">
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card" onclick="document.getElementById('shivankitModal').style.display='block'">
+					<div class="card w3-card" style="background-image: url('images/shivankit.jpg');"></div>
+					<div class="card-info-container">
+						<h3>Shivankit Singh Parihar</h3>
+						<p>Actor and Writer</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card" onclick="document.getElementById('cheetahModal').style.display='block'">
+					<div class="card w3-card" style="background-image: url('images/chetan.jpg');"></div>
+					<div class="card-info-container">
+						<h3>CHETAN CHEETAH</h3>
+						<p>CRPF Commandant | Kirti Chakra</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card" onclick="document.getElementById('vikalpModal').style.display='block'">
+					<div class="card w3-card" style="background-image: url('images/vikalp.jpg');"></div>
+					<div class="card-info-container">
+						<h3>Vikalp Sahni</h3>
+						<p>CTO, Co-founder, Goibibo</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card" onclick="document.getElementById('kannanModal').style.display='block'">
+					<div class="card w3-card" style="background-image: url('images/kannan.jpg');"></div>
+					<div class="card-info-container">
+						<h3>Padma Shri Dr. Ravi Kannan</h3>
+						<p>Oncologist, Cachar Cancer Hospital</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+	</div>
+	<!--		speakers end		 -->
+
+
+
+	<!--		 prev speakers start		 -->
+	<div class="speakers w3-center w3-content" id="prev-speakers" style="max-width: 1200px;">
+
+		<div class="main-header-container w3-padding w3-card">
+			<h2>PREVIOUS SPEAKERS</h2>
+		</div>
+
+		<div class="row-container w3-container" style="margin-top: 0px!important;">
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/Rahul-Kaushik.jpg');"></div>
+					<div class="card-info-container">
+						<h3>RAHUL KAUSHIK</h3>
+						<p>Founder and writer at 'The Melting Words'</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/uddhabh-bharali.jpg');"></div>
+					<div class="card-info-container">
+						<h3>UDDHAB BHARALI</h3>
+						<p>Inventor aka 'Real Life Funsukh Wangdu'</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/vivek-atray.jpg');"></div>
+					<div class="card-info-container">
+						<h3>IAS VIVEK ATRAY</h3>
+						<p>Author, TEDx speaker and ex-IAS</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/Chanchal-Rana.jpg');"></div>
+					<div class="card-info-container">
+						<h3>IAS CHANCHAL RANA</h3>
+						<p>AIR 7 UPSC civil services examination</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row-container w3-container" style="margin-top: 0px!important;">
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/Abhayanand.jpg');"></div>
+					<div class="card-info-container">
+						<h3>IPS ABHAYANAND</h3>
+						<p>Co founder of Super 30</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/balaji.jpg');"></div>
+					<div class="card-info-container">
+						<h3>BALAJI VISHWANATHAN</h3>
+						<p>Renowned Quora writer</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/jadav-payeg.jpg');"></div>
+					<div class="card-info-container">
+						<h3>JADAV PAYENG</h3>
+						<p>aka Forest Man of India</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-quarter w3-padding">
+				<div class="card-container w3-card">
+					<div class="card w3-card" style="background-image: url('images/abby-viral.jpg');"></div>
+					<div class="card-info-container">
+						<h3>ABHINAV PRATEEK</h3>
+						<p>Motivational speaker and entrepreneur</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!--		 prev speakers end		 -->
+
+	<div class="contact w3-center w3-content" id="contact" style="max-width: 1200px;">
+		<div class="main-header-container w3-padding w3-card">
+			<h2>CONTACT US</h2>
+		</div>
+
+		<div class="contact-container w3-row">
+			<div class="w3-third">
+				<h2>Address</h2>
+				<p>NIT Road, Fakiratilla, Silchar, Assam 788010</p>
+				<hr>
+			</div>
+			<div class="w3-third">
+				<h2>Contact</h2>
+				<img src="images/Apoorv.jpg" style="width: 170px; height: 170px; border-radius: 50%;">
+				<p>
+					Apoorv Singh <br/><br>
+					<!-- +91-xxxxxxxxxx <br/><br> -->
+					<a href="https://www.facebook.com/apoorvsingh1999"><i class="fa fa-facebook-square" style="font-size: 2.5em"></i></a>
+					<a href="https://www.linkedin.com/in/apoorvsingh1999/"><i class="fa fa-linkedin-square" style="font-size: 2.5em"></i></a>
+				</p>
+				<hr>
+			</div>
+			<div class="w3-third">
+				<h2>Website</h2>
+				<a href="https://www.tecnoesis.org/" target="_blank" style="text-decoration: none; "><p>www.tecnoesis.org</p></a>
+				<hr>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- modals start -->
+	<div id="shivankitModal" class="w3-modal">
+		<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:700px">
+
+			<div class="w3-center"><br>
+				<span onclick="document.getElementById('shivankitModal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+				<img src="images/shivankit.jpg" alt="shivankit" style="width:30%" class="w3-circle w3-margin-top w3-card">
+				<h3>Shivankit Singh Parihar</h3>
+			</div>
+
+			<div class="w3-container w3-border-top w3-padding-16 w3-light-grey" style="padding-top: 0px!important">
+				<p class="w3-left-align">Born and brought up in Satna, Madhya Pradesh, he had been very passionate about films and acting since his childhood. He got his first break with Shuruaat Ka Interval. He is an actor and writer, known for TSP's Rabish Ki Report, Cubicles, Angry Indian, and many more.</p>
+				<p class="w3-left-align">His works in comedy TV-Mini-Series, “TVF Bachelors” and “The Screen Patti,” have also received critically acclaimed reviews and love from the audience.</p>
+				<button onclick="document.getElementById('shivankitModal').style.display='none'" type="button" class="w3-button w3-red w3-left">Close</button>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="cheetahModal" class="w3-modal">
+		<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:700px">
+
+			<div class="w3-center"><br>
+				<span onclick="document.getElementById('cheetahModal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+				<img src="images/chetan.jpg" alt="Chetan Cheetah" style="width:30%" class="w3-circle w3-margin-top w3-card">
+				<h3>Chetan Cheetah</h3>
+			</div>
+
+			<div class="w3-container w3-border-top w3-padding-16 w3-light-grey" style="padding-top: 0px!important">
+				<p class="w3-left-align">On February 14, 2017, CRPF troops were conducting a search operation in Bandipora (Kashmir Valley) when terrorists hiding in the area started firing at the troops. But Chetan Kumar Cheetah, Commandant of 45 batallion, bravely stalled the terrorists & ended up in suffering multiple gunshots.</p>
+				<p class="w3-left-align">He suffered bullet injuries in his brain, right eye, abdomen, both arms, left hand and in the buttock region while fighting terrorists. He remained in coma for almost 1.5 months before he regained consciousness.<br>Cheetah also received Kirti Chakra, the second highest peacetime gallantry medal.</p>
+				<p class="w3-left-align">Chetan Cheetah says, "I want youngsters to give 100 percent to the country, that's what I have done. The duty which I had, I could have escaped, but instead, I faced the bullets."</p>
+				<button onclick="document.getElementById('cheetahModal').style.display='none'" type="button" class="w3-button w3-red w3-left">Close</button>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="vikalpModal" class="w3-modal">
+		<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:700px">
+
+			<div class="w3-center"><br>
+				<span onclick="document.getElementById('vikalpModal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+				<img src="images/vikalp.jpg" alt="Chetan Cheetah" style="width:30%" class="w3-circle w3-margin-top w3-card">
+				<h3>Vikalp Sahni</h3>
+			</div>
+
+			<div class="w3-container w3-border-top w3-padding-16 w3-light-grey" style="padding-top: 0px!important">
+				<p class="w3-left-align">From creating network effects to blindsiding MakeMyTrip, this guy is the ultimate IT Business strategists.</p>
+				<p class="w3-left-align">Vikalp is a technologist at heart and has worked on large scale Crawl platforms to intelligent extraction algorithms, or big data platforms. He loves to build technologies which can scale and deliver high performance, from front-end to back-end. Vikalp's earlier stint was with IBM.</p>
+				<p class="w3-left-align">A pioneer in consumer oriented python based software development, Vikalp and his team has been continually providing solutions to consumers with the use of AI.</p>
+				<button onclick="document.getElementById('vikalpModal').style.display='none'" type="button" class="w3-button w3-red w3-left">Close</button>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="kannanModal" class="w3-modal">
+		<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:1000px">
+
+			<div class="w3-center"><br>
+				<span onclick="document.getElementById('kannanModal').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+				<img src="images/kannan.jpg" alt="Chetan Cheetah" style="width:30%" class="w3-circle w3-margin-top w3-card">
+				<h3>Padma Shri Dr. Ravi Kannan</h3>
+			</div>
+
+			<div class="w3-container w3-border-top w3-padding-16 w3-light-grey" style="padding-top: 0px!important">
+				<p class="w3-left-align">“We make efforts to offer the best treatment possible to all the patients, irrespective of their socio-economic status. No one should be denied access to treatment due to want of money,” Dr. Kannan says.</p>
+				<p class="w3-left-align">Padma Shri Dr. Ravi Kannan, senior surgical oncologist, Cachar Cancer Hospital, Silchar, our 4rth Conferenza speaker, a legend in the field of medical sciences quit his job in Chennai in the year 2007 and shifted to Barak Valley, seeing the poor cancer treatment facilities in the valley. Over the years, his drive to provide the best medical treatment to patients irrespective of their socio-economic status has witnessed several innovative measures. Some of these include 'Home Visits' and 'Satellite Clinics' that bring medical care to the doorstep of patients, who are mostly daily wage workers. His journey started with a visit to the Cachar Cancer Hospital in Silchar on request. As he went around the wards of the hospital, the pain of the patients made him quit his practice in Chennai to join the hospital for voluntary service. Over the years, he and his incredible team managed to turn the place around. There were only 23 staff members when he joined. Today, there is a 200-member strong team.</p>
+				<p class="w3-left-align">As a matter of fact, Dr. Kannan has treated around 70,000 cancer patients free of cost till now. He has spent 13 years of his life taking cancer treatment to the doorsteps of poor patients, improving follow-up care and subsidising medical costs, and this earned him the fourth most prestigious civilian award in India, Padma Shri, this Republic Day.</p>
+				<button onclick="document.getElementById('kannanModal').style.display='none'" type="button" class="w3-button w3-red w3-left">Close</button>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- modals end -->
+
+	<footer class="w3-container w3-padding-48" style="margin-top: 40px;">
+		<p>TECNOESIS 2020</p>
+		<p>Designed by <a href="https://utkarsh914.github.io/">Utkarsh Tiwari</a></p>
+	</footer>
+
+<script>
+function w3_open() {
+	document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+	document.getElementById("mySidebar").style.display = "none";
+}
+
+function stopLoader(){
+	document.getElementById("loader").style.display = "none";
+	document.getElementById("loaderCircle").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

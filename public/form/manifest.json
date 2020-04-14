@@ -1,0 +1,19 @@
+{
+  "short_name": "Tecnoesis 2020",
+  "name": "Tecnoesis 2020 Registration App",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "workshoplogo.jpg",
+      "type": "image/jpg"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

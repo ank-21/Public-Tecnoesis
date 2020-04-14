@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>cyberhunt2.0</title>
+</head>
+<body oncontextmenu="return false">
+    <section>
+        <div class="container">
+            <div class="logo"></div>
+            <div class="card"><div class="question">
+                22. KITE:NSZE::PLAY: ??
+                </div>
+                <input type="text" name="text" class="answer" onkeypress="enterpressalert(event, this)" autofocus>
+                <input type="submit" name="submit" class="button" onclick="check22()">
+            </div>
+        </div>
+        <button type="submit" class="quitbtn" onclick="quit()">Quit</button>
+    </section>
+    <script src="script/script.js"></script>
+    <script src="script/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        function enterpressalert(e, textarea){
+            var code = (e.keyCode ? e.keyCode : e.which);
+            if(code == 13) { 
+                check22();
+            }
+        }
+        
+    </script>
+</body>
+</html>

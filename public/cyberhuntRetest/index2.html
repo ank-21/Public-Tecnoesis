@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cyberhunt2.0</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body oncontextmenu="return false">
+    <div class="skip-button" id="skip-button" onclick="skipButton()" >Skip</div>
+    <div class="fade"></div>
+    <section class="star-wars">
+        <div class="crawl">
+            <div class="title">
+                <p>
+                    Tecnoesis 2020
+                </p>
+                <h1>
+                    Cyberhunt 2.0
+                </h1>
+            </div>
+            <p>Space is a mysterious place but there are plenty of things we are sure about 
+                when it comes to that vast space that surrounds us here on earth.</p>
+            <p>No one care whether you think Pluto is a planet or not. 
+                Do you know how close it is to the sun?
+                Doesn't matter when Google is your best friend 
+                Let's the voyage of this intergalactic journey proceed.
+                But wait!</p>
+            <p>Tired of rushing here and there to participate??
+                Why go elsewhere when you can be a part of the event sitting in your room?
+                Solve a challenge and progress to the next one. All you need to do is think and click.
+                If you think you've got that special something that marks you different from everyone else we
+                invite you to participate in it.</p>
+            <p>“Let the Saga of Intergalactic Game be ventured”</p>
+        </div>
+    </section>
+    <section class="rules">
+        <div class="inforules"> <h1 style="text-align: center;">RULES</h1>
+            <p>0.Read the rules carefully. </p>
+            <p>1. The first to complete the hunt wins the space-race.</p>
+            <p>2. In case, none of the participants completes the question set.The one reaching to the maximum within 1 hour of time travel will be declared the space conquerer.</p>
+            <p>3.In order to confront the Nth question you should know the (N-1)th question's expected answer.</p>
+            <p>4.Every (6+k)th question [k=0,10,20] will let the luck decide your faith, <br>
+              i.One of the three doors will make you skip one question<br>
+              ii. The other doors will either make you solve a question with hint or <br>
+              iii. A bad luck will gift you a bit difficult question with no hint.</p>
+            <p>5.Ofcourse you can help the accompanying once you are done with all the questions.</p>
+            <p>6. At any point of event if you wish to quit use the quit button provided at the bottom</p>
+            <p>7. All the answers are one word so make sure to do that</p>
+                <button type="submit" class="continuebtn1" onclick="rules()">Continue</button>
+            </div>
+
+    </section>
+    <section class="initialDetails">
+        <div class="formDiv">
+            <form>
+                <div class="container1">
+                  
+                  <h1 style="color:aqua;">Please fill in this form to Continue.</h1>
+                  
+              
+                  <label for="email"><b>Email</b></label>
+                  <input class="infoForm" type="email" placeholder="Enter Email" name="email" required>
+              
+                  <label for="name"><b>Name</b></label>
+                  <input class="infoForm" type="text" placeholder="Enter Name" name="name" required>
+              
+                  <label for="psw-repeat"><b>Contact Number</b></label>
+                  <input class="infoForm" type="text" placeholder="Enter Contact Number" name="contact" required>
+                
+                  <button type="button" class="continuebtn" onclick="loginCon();">Continue</button>
+                </div>
+              </form>
+        </div>
+    </section>
+
+    
+    
+    
+
+
+
+    <script type="text/javascript" src="script/script.js"></script>
+    <script>
+    function loginCon(){
+        console.log('here')
+        var xhttp = new XMLHttpRequest();
+        var infoForm=document.getElementsByClassName('infoForm');
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log('heree')
+                window.location.href=`question/question01.html?${infoForm[0].value}`;
+            }
+        };
+        xhttp.open("POST", "/tecnoesis/cyberhunt/register", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(`email=${infoForm[0].value}&name=${infoForm[1].value}&mobile=${infoForm[2].value}`);
+    }
+    </script>
+</body>
+</html>
