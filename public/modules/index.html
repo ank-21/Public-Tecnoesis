@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modules | Tecnoesis 2020</title>
+	<link rel="icon" href="../images/icon.png">
+	<script src="./js/files.js">
+	</script>
+</head>
+
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css?family=B612:400,700&display=swap');
+
+	::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: #463e3e;    */
+  background: #00d2ff;   
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0092b3; 
+}
+	
+	body{
+		margin: 0;
+		overflow-x: hidden;
+		width: 100vw;
+		height: 300vh;
+	}
+
+	@font-face {
+		font-family: Guardian;
+		src: url('../guardians/Guardians.ttf');
+	}
+
+
+	.preloader{
+		height: 100vh;
+		position: fixed;
+		width: 100vw;
+		top: 0;
+		left: 0;
+		background-color: #000;
+		z-index: 100;
+	}
+
+
+	#modules{
+
+		position: fixed;
+		top: 0;
+		margin: 0;
+		width: 100vw;
+		height: 100vh;
+		background-image: url('backweb.png');
+		background-repeat: no-repeat;
+		background-size: cover; 
+		background-position: center center; 
+	}
+	#modulesimg{
+		position: fixed;
+		width: 30vw;
+		height: 50vh;
+		top: 35vh;
+		left: 40vw;
+		transform: translate(-50%,-50%);
+		transition: all ease 5s;
+		animation: float 1s infinite;
+	}
+
+	@keyframes float {
+		0%{
+			transform: translate(-50%,-50%);
+		}	
+		50%{
+			transform: translate(-50%,-49.5%);
+		}
+		100%{
+			transform: translate(-50%,-50.5%);
+		}
+	}
+
+	#ufo{
+
+		position: fixed;
+		width: auto;
+		height: 52vh;
+		top: 55vh;
+		left: 40vw;
+		transform: translate(-50%,-50%);
+	}
+
+	#modulesname{
+		position: fixed;
+		width: auto;
+		/* height: 52vh; */
+		top: 88vh;
+		left: 40vw;
+		transform: translate(-50%,-50%);
+		color: white;
+		font-family: 'Guardian', sans-serif;
+		font-size: 2em;
+
+	}
+
+	#sidebarleft{
+		position: fixed;
+		display: inline-block;
+		color: white;
+		font-family: sans-serif;
+		left: 2vw;
+		font-family: 'B612', sans-serif;
+		font-weight: 700;
+		top: 50vh;
+		transform: translateY(-50%);
+		cursor: pointer;
+		transition: all ease 1s;
+
+	}
+
+	.active{
+		color: #45c2e6;
+	}
+
+	#moduletext{
+
+		width: 36vw;
+		height: 80vh;
+		position: fixed;
+		background-color: transparent;
+		left: 60vw;
+		top: 50vh;
+		transform: translateY(-50%);
+		overflow: hidden;
+		transition: all ease 1s;
+		color: white;
+		z-index: 5;
+		height: 100vh;
+
+	}
+
+	.modtext{
+		position: absolute;
+		color: white;
+		text-align: justify;
+		padding: 20px;
+		font-family: 'B612' , sans-serif;		
+		z-index: 10;
+		height: 100vh;
+		/* transition: all ease 0.8s; */
+
+	}
+	.modtext a{
+		text-decoration: none;
+	}
+	.modtext a div.moreInfo{
+		font-size: 2.5vh;
+    text-align: right;
+		color: #fff;
+		text-decoration: none;
+    cursor: pointer;
+	}
+
+	.modtext a div.moreInfo:hover{
+		color: #00d2ff;
+	}
+	body{
+		background-color: #000;;
+	}
+	.navSection{
+		height: 100vw;
+		background-color: transparent;
+	}
+	.navSection div.modtext{
+		max-width: 40vw;
+    position: absolute;
+    left: 52vw;
+    margin-top: 25vh;
+	}
+	.navSection div.modtext p{
+		font-size: 2.7vh;
+		font-weight: 200;
+	}
+	
+/* 
+	#robtext{
+		top: 20%;
+	}
+	#vwarztext{
+		top: 100%;
+	}
+	#showcasetext{
+		top: 100%;
+	}
+
+	#amazerstext{
+		top: 100%;
+	}
+
+	#conferanzatext{
+		top: 100%;
+	}
+
+	#cyberwarptext, #myndsnaretext, #asmetext{
+		top: 100%;
+	} */
+
+
+
+
+	#menu{
+		width: 18vw;
+		height: auto;
+		left: 78vw;
+		position: fixed;
+		top: 7vh;
+		display: none;
+		cursor: pointer;
+	}
+
+	#menuside{
+		width: 110vw;
+		height: 110vh;
+		position: fixed;
+		z-index: 30;
+		left: -110vw;
+		background-color: #000000;
+		display: none;
+		transition: all ease 1s;
+		opacity: 50%;
+	}
+
+	/* ARYAN CODE */
+
+	.eventButtons{
+		display: flex;
+    flex-flow: row wrap;
+    margin-top: 5vh;
+	}
+	.eventButtons div{
+		min-width: 6vw;
+    padding: 1vh;
+    border: 1px solid;
+    font-size: 2vh;
+		margin: 0vw 0.6vw 0.8vh 0vw;
+    text-align: center;
+	}
+
+	.eventButtons div:hover{
+		background-color: #fff;
+		color: #000;
+		cursor: pointer;
+	}
+	#tecLogo{
+		position: fixed;
+		top: 0;
+		left: 1vw;
+		width: 30vw;
+	}
+	#pnrcontainer{
+		position: fixed;
+		top: 0;
+		z-index: -1;
+	}
+	/* ARYAN CODE */
+
+	@media(orientation:portrait)
+	{
+
+		#tecLogo{
+			
+			width: 0vw;
+		}
+		.navSection div.modtext{
+			max-width: 80vw;
+			left: 10vw;
+			margin-top: 0vh;
+		}
+		#menuside{
+			display: block;
+		}
+
+		#sidebarleft{
+			font-size: 2.5em;
+			left: -35vw;
+			z-index: 40;
+		}
+
+		#modulesname{
+			top: 83vh;
+			left: 50vw;
+			font-size: 4em;
+		}
+
+		#ufo {
+			height: 40vh;
+			top: 60vh;
+			left: 50vw;
+			opacity: 90%;
+		}	
+		#modulesimg {
+			width: 100vw;
+			top: 45vh;
+			left: 50vw;
+			opacity: 90%;
+		}
+
+		#moduletext {
+			width: 75vw;
+			height: 74vh;
+			left: 22vw;
+			top: 53vh;
+			transition: all ease 1s; 
+			font-size: 2.3em;
+			/*font-weight: bold;*/
+			z-index: 10;
+
+		}
+
+		#menu{
+			display: block;
+		cursor: pointer;
+		z-index: 35;
+		}
+	}
+
+		
+.spinner{
+  width: 80px;
+  height: 80px;
+  
+  border: 2px solid #38dbff;
+  border-top:3px solid #014b5c;
+  border-radius: 100%;
+  
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+  
+  animation: spin 1s infinite linear;
+}
+
+.img-inside{
+
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+}
+
+
+
+</style>
+<body>
+
+	<div class="preloader">
+		<img src="../optimized/logo white-small.png" style="height: 60px;" class="img-inside">
+		<div class="spinner">
+
+		</div>
+	</div>
+
+	
+	<section class="navSection" data-section-name="robotron">
+		<div id="robtext" class="modtext">
+				<p>
+						Robotron, revolves around the fascinating world of robots and has
+						successfully managed to incorporate the ideals of engineering to tackle the ever evolving innovative challenges.
+				</p>
+				<a href="./robotron/"><div class="moreInfo">More Information</div></a>
+				
+			</div>
+	</section>
+
+	<section class="navSection"  data-section-name="vwarz">
+		<div id="vwarztext" class="modtext">
+				<p>
+						Tecnoesis brings you the ultimate gaming battle : V-Warz. 
+						V-warz not only offers you incredible competition but shows you where you stand.
+					</p>
+				
+			</div>
+	</section>
+	
+	<section class="navSection" data-section-name="showcase">
+		<div id="showcasetext" class="modtext">
+				<p>
+					Let us together, go on a ride where we witness the best in the automotive world, in terms of
+					products, technologies, concepts, defence and trends; and appreciate the wonder machines which assist us
+					directly and indirectly in our daily routine.
+				</p>
+				<a href="./showcase/"><div class="moreInfo">More Information</div></a>
+
+			</div>
+	</section>
+	<section class="navSection" data-section-name="amazers">
+		<div id="amazerstext" class="modtext">
+				<p>
+						How can an event be a festival if there's 
+						no fun? Amazers module provides you 
+						the incredible opportunity to bring out 
+						the child inside you.
+				</p>
+				<div class="eventButtons">
+					<div>The Paintball Battle</div>
+					<div>Target Shooting</div>
+					<div>Cube Wizard</div>
+					<div>Treasure Hunt 2.0</div>
+					<div>Speed Skating</div>
+					<div>Stilt Football</div>
+					<div>3ON3</div>
+				</div>
+			</div>
+	</section>
+	<section class="navSection" data-section-name="conferanza">
+		<div id="conferanzatext" class="modtext">
+				<p>
+						Conferenza is the guest lecture series where achievers across various fields share their experiences. It has been blessed with the presence of
+						personalities like Padma Shri Uddhab Bharali, Balaji Vishwanathan, Ex-IAS Vivek Atray				</p>
+				<a href="./conferanza/"><div class="moreInfo">More Information</div></a>
+			</div>
+	</section>
+	<section class="navSection" data-section-name="cyberwarp">
+		<div id="cyberwarptext" class="modtext">
+				<p>
+						Cyberwarp brings to you a manifold of invigorating events ranging from puzzles, riddles and mind boggling stuff.
+						So, dive straight into the diverse world of Cyberwarp and ignite the spark of creativity inside you
+				</p>
+				<a href="./cyberwarp/"><div class="moreInfo">More Information</div></a>
+			</div>
+	</section>
+	
+	<section class="navSection" data-section-name="myndsnare">
+		<div id="myndsnaretext" class="modtext">
+				<p>
+						‘Myndsnare’ is the quizzing module of
+						Tecnoesis conducted by reknowned Quizmasters, Students from across the country compete for exciting prizes. 
+				</p>
+				<a href="./myndsnare/"><div class="moreInfo">More Information</div></a>
+			</div>
+	</section>
+	
+	<section class="navSection" data-section-name="asme">
+		<div id="asmetext" class="modtext">
+				<p>
+						Organized by ASME, NIT Silchar, the events under this module will definitely force you to don your thinking cap and
+						put your logical skills to test. Be it designing or simulation or making simple automobile objects and much more.
+				</p>
+				<a href="./asme/"><div class="moreInfo">More Information</div></a>
+			</div>
+	</section>
+
+	<section class="navSection" data-section-name="sae">
+		<div id="saetext" class="modtext">
+				<p>
+						Does the showcase of
+						automotive engineering prowess fill you with sheer wonder? Do you watch endless episodes of Top
+						Gear and The Grand Tour at one go? If yes, then this is it.
+				</p>
+				<div class="eventButtons">
+					<div>Cycle Assembly</div>
+					<div>Automobile Quiz</div>
+				</div>
+			</div>
+	</section>
+	
+	<section class="navSection" data-section-name="archinova">
+			<div id="archinovatext" class="modtext">
+					<p>
+							Tecnoesis’20 presents Smart City, the event which develops a significant channel between construction and tackling nature’s worst behaviour.
+					</p>
+					<!-- <div class="eventButtons">
+						<div>Smart City</div>
+						<div>My City My Dream</div>
+					</div> -->
+					<a href="./smartcity/"><div class="moreInfo">More Information</div></a>
+				</div>
+		</section>
+		
+		<section class="navSection" data-section-name="empresaario">
+				<div id="empresaariotext" class="modtext">
+						<p>
+								Empresaario is the business module that aims to put forth one’s management and entrepreneurship skills into action.
+						</p>
+						<a href="./empresaario/"><div class="moreInfo">More Information</div></a>
+					</div>
+			</section>
+
+	<div id="sidebarleft">
+		<span id="robotronBar" class="active" data-name="robotron">ROBOTRON</span>
+		<br><br>
+		<span id="vwarzBar" class="" data-name="vwarz">V-WARZ</span>
+
+
+		<br><br>
+		<span id="showcaseBar" class="" data-name="showcase">SHOWCASE</span>
+
+		<br><br>
+		<span id="amazersBar" class="" data-name="amazers">AMAZERS</span>
+
+		<br><br>
+		<span id="conferanzaBar" class="" data-name="conferanza">CONFERANZA</span>
+
+		<br><br>
+		<span id="cyberwarpBar" class="" data-name="cyberwarp">CYBERWARP</span>
+		<br><br>
+		<span id="myndsnareBar" class="" data-name="myndsnare">MYNDSNARE</span>
+		<br><br>
+		<span id="asmeBar" class="" data-name="asme">ASME</span>
+		<br><br>
+		<span id="saeBar" class="" data-name="sae">SAE</span>
+		<br><br>
+		<span id="archinovaBar" class="" data-name="archinova">SMART CITY</span>
+		<br><br>
+		<span id="empresaarioBar" class="" data-name="empresaario">EMPRESAARIO</span>
+	</div>
+	
+	<!-- <img src="btn-menu.svg" id="menu"> -->
+	<div id="modulesimg">
+
+	</div>
+	<img id="ufo" src="./images/halo-other-small.png">
+	<span id="modulesname">ROBOTRON</span>
+	<a href="./../">
+		<img src="./images/logo white.png" alt="Tecnoesis’20" id="tecLogo">
+	</a>
+		<div id="pnrcontainer"></div>
+	<!-- <script src="./js/paronama.js" type="module"></script> -->
+	<script src="./js/pano.js" type="module"></script>
+
+</body>
+
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/jquery.scrollify.js"></script>
+<script>
+	window.onload=function(){
+		document.getElementsByClassName('preloader')[0].style.display='none';
+	}
+	window.loadImg=function(imgSrc){
+	};
+	let isMobile=false;
+	let glitchModule=undefined;
+	(function(){
+		if(document.documentElement.clientHeight>document.documentElement.clientWidth){
+			isMobile=true;
+			console.log('Mobile Version');
+			let moduleImg = document.createElement('img');
+			moduleImg.src=moduleSource[0];
+			moduleImg.style.width="100%";
+			moduleImg.style.height='auto';
+			moduleImg.id='mobileModuleImg';
+			document.getElementById('modulesimg').appendChild(moduleImg);
+		}
+		else{
+			let script=document.createElement('script');
+			script.src="../libs/p5.js";
+			document.body.appendChild(script);
+			let script2=document.createElement('script');
+			script2.src="../libs/p5_dom.js";
+			document.body.appendChild(script2);
+			let script3=document.createElement('script');
+			script3.src="./js/glitch.js";
+			document.body.appendChild(script3);
+		}
+	})();
+</script>
+<script>
+	let curr_index=0;
+	$(function(){
+		curr_index = $.scrollify.currentIndex();
+		$.scrollify({
+			section: ".navSection",
+			before: function (i) {
+				$("#sidebarleft span").removeClass("active");
+				$("#" + $.scrollify.current().data('section-name')+'Bar').addClass("active");
+				curr_index = $.scrollify.currentIndex();
+				$('#modulesname').text($.scrollify.current().data('section-name').toUpperCase());
+				if(isMobile){
+					// console.log(moduleSource[curr_index])
+					$('#mobileModuleImg').attr('src',moduleSource[curr_index]);
+					// document.getElementById('mobileModuleImg').src=moduleSource[curr_index];
+					if(curr_index===4){
+						$('#modulesimg').css("top", "25vh");
+					}
+					else{
+						$('#modulesimg').css("top", "");
+					}
+				}
+				else{
+					loadImg(moduleSource[curr_index]);
+				}
+			},
+			afterRender: function(){
+				curr_index = $.scrollify.currentIndex();
+				$.scrollify.instantMove('#robotron');
+			}
+		});
+	});
+	$("#sidebarleft span").on('click', function(){
+		console.log($(this).data('name'))
+		$.scrollify.move('#'+ $(this).data("name"));
+	});
+</script>
+</html>
